@@ -1,0 +1,45 @@
+{% extends 'Nav.html' %}
+
+{% block title %} Mini Project {% endblock title %}
+
+{% block body %}
+<div class="container" >
+    <h1 class="my-3">Contect Us</h1>
+
+    <form action="{% url 'Contect' %}" method="Post">
+        {% csrf_token %}
+
+
+        <div class="my-3 ">
+            <label for="exampleFormControlInput1" class="form-label">Name</label>
+            <input type="text" class="form-control" name="name" id="exampleFormControlInput1" placeholder="Enter your name">
+        </div>
+        
+        <div class="my-3 ">
+            <label for="exampleFormControlInput1" class="form-label">Last Name</label>
+            <input type="text" class="form-control" name="lname" id="exampleFormControlInput1" placeholder="Enter your Last name">
+        </div>
+
+        <div class="my-3 ">
+            <label for="exampleFormControlInput1" class="form-label">Phone no.</label>
+            <input type="text" class="form-control" name="phone" id="exampleFormControlInput1" placeholder="Enter your Phone no.">
+        </div>
+    
+        <div class="my-3 ">
+            <label for="exampleFormControlInput1" class="form-label">Email address</label>
+            <input type="email" class="form-control" name="email" id="exampleFormControlInput1" placeholder="name@example.com">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+
+    
+
+    </form>
+    
+    
+   
+</div>
+
+{% endblock body %}
+
+

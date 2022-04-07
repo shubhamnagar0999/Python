@@ -1,0 +1,46 @@
+{% extends 'Nav.html' %}
+
+{% block title %} Mini Project {% endblock title %}
+
+{% block body %}
+<div class="container" >
+    <h1 class="my-3"></h1>
+
+    <form action="{% url 'update' udata.id %}" method="Post">
+        {% csrf_token %}
+
+
+        <div class="my-3 ">
+            <label for="exampleFormControlInput1" class="form-label">Name</label>
+            <input type="text" class="form-control" name="name" id="exampleFormControlInput1" value="{{udata.Name}}">
+        </div>
+        
+        <div class="my-3 ">
+            <label for="exampleFormControlInput1" class="form-label">Last Name</label>
+            <input type="text" class="form-control" name="lname" id="exampleFormControlInput1" value="{{udata.LName}}">
+        </div>
+
+        <div class="my-3 ">
+            <label for="exampleFormControlInput1" class="form-label">Phone no.</label>
+            <input type="text" class="form-control" name="phone" id="exampleFormControlInput1" value="{{udata.Phone}}">
+        </div>
+    
+        <div class="my-3 ">
+            <label for="exampleFormControlInput1" class="form-label">Email address</label>
+            <input type="email" class="form-control" name="email" id="exampleFormControlInput1" value="{{udata.Email}}">
+        </div>
+        <button type="submit" class="btn btn-primary my-3">Update</button>
+    </form>
+    
+    <form action="{% url 'table' %}">
+        <button type="submit" class="btn btn-primary ">Go Back</button>
+        
+    </form>
+    
+    
+   
+</div>
+
+{% endblock body %}
+
+

@@ -1,0 +1,6 @@
+first install virtualenv with (pip install virtualenv)
+you can check with (virtualenv)
+go to virtualenv (with activate from scripts)
+for crate requirments.txt(pip freeze > requirments.txt)
+you can install perticular requirments.txt(pip install -r requirments.txt)
+for install system python packages(virtualenv --system-site-packages ""env name")

@@ -1,0 +1,49 @@
+{% extends 'Nav.html' %}
+
+
+
+{% block title %} Mini Project {% endblock title %}
+
+{% block body %}
+
+<h1 class="text-center my-3">All Users</h1>  
+<div class="container">
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">Phone no.</th>
+                <th scope="col">Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for data in data %}
+            <tr>
+                <td>{{data.id}}</td>
+                <td>{{data.Name}}</td>
+                <td>{{data.LName}}</td>
+                <td>{{data.Phone}}</td>
+                <td>{{data.Email}}</td>
+                
+                <form action="{% url 'delete' data.id %}" >  
+                    <button type="submit" class="btn btn-primary ">Delete {{data.id}}</button>
+                </form>
+                
+                <form action="{% url 'update' data.id %}" >  
+                    <button type="submit" class="btn btn-primary ">update {{data.id}}</button>
+                </form>
+            </tr>
+                
+            {% endfor %}
+        </tbody>
+    </table> 
+</div> 
+    
+   
+
+{% endblock body %}
+
+
