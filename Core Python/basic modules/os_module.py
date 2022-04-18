@@ -1,8 +1,8 @@
 import os   
 # print(dir(os))           #show all module 
-# print(os.listdir())      #os module give name you every file that your folder containe.  
+print(os.listdir())      #os module give name you every file that your folder containe.  
 
-# print(os.getcwd())
+print(os.getcwd())
 
 # os.chdir("c:/")             #can change directory 
 # print(os.getcwd())
