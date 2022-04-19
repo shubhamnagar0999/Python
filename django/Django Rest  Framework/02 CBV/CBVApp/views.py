@@ -1,8 +1,5 @@
-import imp
-from os import stat
 from django.http import JsonResponse, response
 from django.shortcuts import render
-from numpy import delete
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
